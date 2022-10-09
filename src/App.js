@@ -1,14 +1,23 @@
-// Import data
+// 1 Import the array where you need to iteratit over it
+import { postings } from "./postings";
 
 // Import components
-import './App.css';
+import "./App.css";
+import Directory from "./Components/Directory";
+import Gallery from "./Components/Gallery";
+import Searchbar from "./Components/Searchbar";
+import Sidebar from "./Components/Sidebar";
 
-function App(){
+function App() {
   return (
     <div>
-      <h1>craigslist</h1>
+      <hi>Craiglist</hi>
       <div className="App">
-        {/* Your content will go here! */}
+        <Searchbar />
+        <Directory />
+        <Sidebar />
+        {/* 2 pass the array to Gallery */}
+        <Gallery postings={postings} />
       </div>
     </div>
   );
